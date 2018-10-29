@@ -9,7 +9,7 @@ test('all() passes if all filters pass', (done) => {
   middleware({ url: '/' }, done);
 });
 
-test('all() passes if any filter fails', () => {
+test('all() fails if any filter fails', () => {
   const middleware = all([
     (url, next) => next(),
     (url, next) => next('failure'),

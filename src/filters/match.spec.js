@@ -22,3 +22,10 @@ test('match() fails if a query parameter doesn\'t match its condition', () => {
   });
 });
 
+test('match() succeeds if a query parameter matches its condition', (done) => {
+  const middleware = match('/abc', {
+    name: (param) => param === 'joe',
+  });
+
+  middleware('/abc?name=joe', done);
+});
