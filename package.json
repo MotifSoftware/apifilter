@@ -1,0 +1,17 @@
+{
+  "name": "apifilter",
+  "version": "1.0.0",
+  "description": "Express middleware for filtering API requests.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  },
+  "dependencies": {
+    "moment": "^2.22.2"
+  }
+}
