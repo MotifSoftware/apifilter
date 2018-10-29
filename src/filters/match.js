@@ -13,7 +13,6 @@ const match = (matchUrl, params) => (requestUrl, next) => {
       .map(key => [ key, params[key](queryParams[key]) ])
       .filter(([ key, result ]) => !result)
       .map(([ key, _ ]) => `'${key}' failed validation`);
-    console.log(params, query, results);
 
     if (results.length > 0) {
       next(results[0]);
